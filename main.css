@@ -21,10 +21,16 @@ html {
   flex-direction: row;
 }
 
-.links {
+.store {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .store-item {
@@ -40,5 +46,12 @@ html {
   width: 150px;
   height: 100px;
   border: 1px solid #000;
+  margin: 10px 0;
+}
+
+.store-item p{
+  object-fit: contain;
+  object-fit: scale-down;
+  width: 150px;
   margin: 10px 0;
 }
