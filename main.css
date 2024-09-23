@@ -3,6 +3,9 @@ html {
   /* height:100%; */
   margin: 0px;
   padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 #app {
@@ -11,36 +14,50 @@ html {
    * Set height of footer to 15% of page
    * */
   display: grid;
-  grid-template-rows: [header] 15% [main] 70% [footer] 15% [last-line];
+  /* grid-template-rows: [header] 15% [main] 70% [footer] 15% [last-line];
+  height: 100vh;
+  width:100%; */
 }
 
-#main {
+header {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
 }
 
-.store {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  flex-direction: column;
+header .store {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-.links {
+nav ul.links {
+  list-style: none;
   display: flex;
-  justify-content: flex-end;
+  gap: 20px;
+}
+
+
+main {
+  padding: 10px 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .store-item {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
   flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
 }
 
-.store-item img{
+.store-item img {
   object-fit: contain;
   object-fit: scale-down;
   width: 150px;
@@ -49,9 +66,26 @@ html {
   margin: 10px 0;
 }
 
-.store-item p{
+.store-item p {
   object-fit: contain;
   object-fit: scale-down;
-  width: 150px;
-  margin: 10px 0;
+  width: auto;
+  margin: 4px 0;
+}
+
+.store-item span:nth-child(4),
+.store-item span:nth-child(5),
+.store-item span:nth-child(6) {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 0% 5%;
+}
+
+footer {
+  text-align: center;
+  padding: 0 5%;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-size: 14px;
 }
