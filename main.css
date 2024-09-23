@@ -3,6 +3,9 @@ html {
   /* height:100%; */
   margin: 0px;
   padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 #app {
@@ -11,17 +14,78 @@ html {
    * Set height of footer to 15% of page
    * */
   display: grid;
-  grid-template-rows: [header] 15% [main] 70% [footer] 15% [last-line];
+  /* grid-template-rows: [header] 15% [main] 70% [footer] 15% [last-line];
+  height: 100vh;
+  width:100%; */
 }
 
-.links {
+header {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 5%;
+}
+
+
+nav ul.links {
+  display: flex;
+  gap: 20px;
+}
+
+
+main {
+  padding: 10px 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  overflow-x: hidden;
 }
 
 .store-item {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.store-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.store-item p {
+  margin: 10px 0;
+  color: #555;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.store-item span {
+  margin: 10px 0;
+}
+
+.store-item span:nth-child(4) {
+  margin-top: auto;
+}
+
+.store-item span:nth-child(4),
+.store-item span:nth-child(5),
+.store-item span:nth-child(6) {
+  display: inline-block;
+  width: 33.33%;
+}
+
+footer {
+  text-align: center;
+  padding: 0 5%;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-size: 14px;
 }
