@@ -14,6 +14,13 @@ html {
   grid-template-rows: [header] 15% [main] 70% [footer] 15% [last-line];
 }
 
+#main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
 .links {
   display: flex;
   flex-flow: row wrap;
